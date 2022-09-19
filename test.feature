@@ -1,3 +1,4 @@
+@ID-123
 Feature: Istio is installed
   Istio needs to be installed
   as the core prerequisite.
@@ -10,6 +11,7 @@ Feature: Istio is installed
     And Istio pods are available
     And HPA is deployed
 
+  @ID-124
   Scenario: Istio component installed in production profile has resources configured correctly
     Given a running Kyma cluster with "production" profile
     When Istio component is installed

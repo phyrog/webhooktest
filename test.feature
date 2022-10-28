@@ -25,3 +25,11 @@ Feature: Istio is installed
     And "pilot" has "limits" set to cpu - "500m" and memory - "1024Mi"
     And "egress-gateway" has "requests" set to cpu - "10m" and memory - "120Mi"
     And "egress-gateway" has "limits" set to cpu - "2000m" and memory - "1024Mi"
+
+  Scenario: Bla bla bla
+    Given a running Kyma cluster with "production" profile
+    When Istio component is installed
+    Then there is 2 pod for Pilot
+    And there is 3 pod for Ingress gateway
+    And Istio pods are available
+    And HPA is deployed
